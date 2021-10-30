@@ -4,8 +4,8 @@
 # Follow the commands :-
 #                1. CREATE USER 'internet'@'localhost' IDENTIFIED BY 'Qwerty@321';
 #                2. GRANT SELECT ON * . * TO 'internet'@'localhost';
-#                3. CREATE DATABASE internet;
-#                4. GRANT ALL PRIVILEGES ON `wave` . * TO 'internet'@'localhost';
+#                3. CREATE DATABASE internetDB;
+#                4. GRANT ALL PRIVILEGES ON `internetDB` . * TO 'internet'@'localhost';
 #                5. CREATE TABLE network (time datetime, ip varchar(255), data varchar(255));
 #----------------------------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ time.sleep(1)
 print('##############################################################')
 
 # DB Connectors And Strings#################################
-db = MySQLdb.connect(host="localhost", user="internet", passwd="Qwerty@321",db="internet")
+db = MySQLdb.connect(host="localhost", user="internet", passwd="Qwerty@321",db="internetDB")
 cursor = db.cursor()
 print_lock = threading.Lock()
 start_time = datetime.now()
